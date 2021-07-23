@@ -23,7 +23,7 @@ var imgLoad = document.getElementById("ids");
 //Init
 window.onload = function(e) {
     lanjut.style.visibility = 'hidden';
-    help_img.style.visibility = 'hidden';
+    help_img.style.display = 'none';
 }
 
 mulai.addEventListener('click', function() {
@@ -81,9 +81,9 @@ var help_img = document.getElementById('help_img');
 var change = true;
 help.addEventListener('click', function() {
     if (change == true) {
-        help_img.style.visibility = 'visible';
+        help_img.style.display = 'block';
     } else {
-        help_img.style.visibility = 'hidden';
+        help_img.style.display = 'none';
     }
     change = !change;
 })
