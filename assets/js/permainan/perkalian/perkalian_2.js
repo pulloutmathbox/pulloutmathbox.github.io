@@ -24,7 +24,6 @@ var imgLoad = document.getElementById("ids");
 window.onload = function(e) {
     lanjut.style.visibility = 'hidden';
     help_img.style.display = 'none';
-    btn_help.style.width = '20%';
 }
 
 mulai.addEventListener('click', function() {
