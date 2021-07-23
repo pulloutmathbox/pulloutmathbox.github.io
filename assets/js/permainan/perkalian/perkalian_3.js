@@ -87,12 +87,15 @@ for (var i = 0; i < number.length; i++) {
 }
 var help = document.getElementById('help');
 var help_img = document.getElementById('help_img');
+var btn_help = document.getElementById('btn_help');
 var change = true;
 help.addEventListener('click', function() {
     if (change == true) {
         help_img.style.display = 'block';
+        btn_help.style.width = '60%';
     } else {
         help_img.style.display = 'none';
+        btn_help.style.width = '20%';
     }
     change = !change;
 })
