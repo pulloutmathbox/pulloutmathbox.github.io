@@ -26,6 +26,8 @@ window.onload = function(e) {
     help_img.style.display = 'none';
 }
 
+var total = [2, 3, 4, 4, 5];
+var kurang = [1, 2, 2, 3, 2];
 mulai.addEventListener('click', function() {
     arrayNumber = [
         [1],
@@ -42,6 +44,18 @@ mulai.addEventListener('click', function() {
         [`${baseImg}angka_gif/pengurangan/level1/pengurangan_5.gif`],
     ]
     mulai.style.visibility = 'hidden';
+    var tambah = document.getElementById('chi');
+    for (let index = 0; index < total[0]; index++) {
+        let newEl = document.createElement('div');
+        newEl.classList = 'col-1 uwu';
+        var imgEl = document.createElement('img');
+        imgEl.src = '../../assets/img/help/pengurangan/apel.png';
+        imgEl.classList = 'bottom-0 pb-4 position-fixed';
+        imgEl.width = 60;
+        newEl.appendChild(imgEl);
+        tambah.appendChild(newEl);
+        numbs = 0;
+    }
 });
 
 gambarGif.addEventListener('click', function() {
@@ -49,8 +63,11 @@ gambarGif.addEventListener('click', function() {
     audioGif.play()
 });
 
+
 var number = document.getElementsByClassName("number");
+var numbs;
 for (var i = 0; i < number.length; i++) {
+    var num = 0;
     number[i].addEventListener('click', function() {
         audio = new Audio(`${baseUrl}${this.id}.mp3`);
         if (arrayNumber.length == 0) {
@@ -62,11 +79,29 @@ for (var i = 0; i < number.length; i++) {
                     audioSuccess.play();
                     alert('Benar');
                     lanjut.style.visibility = 'visible';
+
                 } else {
                     count = count + 1;
                     gambarGif.src = imgNumber[count];
                     audioSuccess.play();
                     alert('Benar');
+                    var tambah = document.getElementById('chi');
+                    while (tambah.firstChild) {
+                        tambah.firstChild.remove()
+                    }
+                    num++;
+                    numbs = num;
+                    for (let index = 0; index < total[num]; index++) {
+                        let newEl = document.createElement('div');
+                        newEl.classList = 'col-1 uwu';
+                        var imgEl = document.createElement('img');
+                        imgEl.src = '../../assets/img/help/pengurangan/apel.png';
+                        imgEl.width = 60;
+                        imgEl.classList = 'bottom-0 pb-4 position-fixed';
+                        newEl.appendChild(imgEl);
+                        tambah.appendChild(newEl);
+
+                    }
                 }
             } else {
                 audio.play();
@@ -78,14 +113,28 @@ for (var i = 0; i < number.length; i++) {
 var help = document.getElementById('help');
 var help_img = document.getElementById('help_img');
 var btn_help = document.getElementById('btn_help');
+
 var change = true;
 help.addEventListener('click', function() {
     if (change == true) {
         help_img.style.display = 'block';
-        btn_help.style.width = '60%';
+        btn_help.style.width = 'auto';
     } else {
         help_img.style.display = 'none';
         btn_help.style.width = '20%';
     }
     change = !change;
 })
+
+var tambah = document.getElementById('chi');
+var uwu = document.getElementsByClassName('uwu');
+tambah.addEventListener('click', function() {
+    var index2 = 0;
+    for (index2; index2 < kurang[numbs]; index2++) {
+        var imgES = document.createElement('img');
+        imgES.classList = 'bottom-0 pb-4 position-fixed';
+        imgES.src = '../../assets/img/help/pengurangan/silang.png';
+        imgES.width = 60;
+        uwu[index2].appendChild(imgES);
+    }
+});
