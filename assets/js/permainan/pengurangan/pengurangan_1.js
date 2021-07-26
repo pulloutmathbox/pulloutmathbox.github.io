@@ -113,7 +113,6 @@ for (var i = 0; i < number.length; i++) {
 var help = document.getElementById('help');
 var help_img = document.getElementById('help_img');
 var btn_help = document.getElementById('btn_help');
-
 var change = true;
 help.addEventListener('click', function() {
     if (change == true) {

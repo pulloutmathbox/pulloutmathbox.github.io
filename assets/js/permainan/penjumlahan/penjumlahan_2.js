@@ -24,8 +24,11 @@ var imgLoad = document.getElementById("ids");
 window.onload = function(e) {
     lanjut.style.visibility = 'hidden';
     help_img.style.display = 'none';
+    help_img.style.visibility = 'hidden';
 }
 
+var x = [6, 6, 7, 8, 9];
+var y = [1, 3, 1, 2, 1];
 mulai.addEventListener('click', function() {
     arrayNumber = [
         [7],
@@ -42,6 +45,28 @@ mulai.addEventListener('click', function() {
         [`${baseImg}angka_gif/penjumlahan/level2/penjumlahan_5.gif`],
     ]
     mulai.style.visibility = 'hidden';
+    var X = document.getElementById('tambahX');
+    var Y = document.getElementById('tambahY');
+    for (let index = 0; index < x[0]; index++) {
+        let newEl = document.createElement('div');
+        newEl.classList = 'col';
+        var imgEl = document.createElement('img');
+        imgEl.src = '../../assets/img/help/penjumlahan/pisang.png';
+        imgEl.width = 60;
+        newEl.appendChild(imgEl);
+        X.appendChild(newEl);
+        numbs = 0;
+    }
+    for (let index = 0; index < y[0]; index++) {
+        let newEl = document.createElement('div');
+        newEl.classList = 'col';
+        var imgEl = document.createElement('img');
+        imgEl.src = '../../assets/img/help/penjumlahan/pisang.png';
+        imgEl.width = 60;
+        newEl.appendChild(imgEl);
+        Y.appendChild(newEl);
+        numbs = 0;
+    }
 });
 
 gambarGif.addEventListener('click', function() {
@@ -51,6 +76,7 @@ gambarGif.addEventListener('click', function() {
 
 var number = document.getElementsByClassName("number");
 for (var i = 0; i < number.length; i++) {
+    var num = 0;
     number[i].addEventListener('click', function() {
         audio = new Audio(`${baseUrl}${this.id}.mp3`);
 
@@ -68,6 +94,37 @@ for (var i = 0; i < number.length; i++) {
                     gambarGif.src = imgNumber[count];
                     audioSuccess.play();
                     alert('Benar');
+                    var X = document.getElementById('tambahX');
+                    var Y = document.getElementById('tambahY');
+                    while (X.firstChild) {
+                        X.firstChild.remove()
+                    }
+                    while (Y.firstChild) {
+                        Y.firstChild.remove()
+                    }
+                    num++;
+                    numbs = num;
+
+                    for (let index = 0; index < x[num]; index++) {
+                        let newEl = document.createElement('div');
+                        newEl.classList = 'col';
+                        var imgEl = document.createElement('img');
+                        imgEl.src = '../../assets/img/help/penjumlahan/pisang.png';
+                        imgEl.width = 60;
+                        newEl.appendChild(imgEl);
+                        X.appendChild(newEl);
+                        numbs = 0;
+                    }
+                    for (let index = 0; index < y[num]; index++) {
+                        let newEl = document.createElement('div');
+                        newEl.classList = 'col';
+                        var imgEl = document.createElement('img');
+                        imgEl.src = '../../assets/img/help/penjumlahan/pisang.png';
+                        imgEl.width = 60;
+                        newEl.appendChild(imgEl);
+                        Y.appendChild(newEl);
+                        numbs = 0;
+                    }
                 }
             } else {
                 audio.play();
@@ -83,10 +140,10 @@ var change = true;
 help.addEventListener('click', function() {
     if (change == true) {
         help_img.style.display = 'block';
-        btn_help.style.width = '60%';
+        help_img.style.visibility = 'visible';
     } else {
         help_img.style.display = 'none';
-        btn_help.style.width = '20%';
+        help_img.style.visibility = 'hidden';
     }
     change = !change;
 })
