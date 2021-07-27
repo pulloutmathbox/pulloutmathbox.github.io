@@ -9,6 +9,7 @@ var imageOne = document.getElementById("1");
 var imageTwo = document.getElementById("2");
 var imageThree = document.getElementById("3");
 var gambarGif = document.getElementById("gambarGif");
+var gambarHelp = document.getElementById("help_img");
 
 const baseUrl = '../../assets/music/';
 const baseImg = '../../assets/img/';
@@ -41,6 +42,13 @@ mulai.addEventListener('click', function() {
         [`${baseImg}angka_gif/perkalian/level1/perkalian_4.gif`],
         [`${baseImg}angka_gif/perkalian/level1/perkalian_5.gif`],
     ]
+    helpNumber = [
+        [`${baseImg}help/perkalian/level1/1.png`],
+        [`${baseImg}help/perkalian/level1/2.png`],
+        [`${baseImg}help/perkalian/level1/3.png`],
+        [`${baseImg}help/perkalian/level1/4.png`],
+        [`${baseImg}help/perkalian/level1/5.png`],
+    ]
     mulai.style.visibility = 'hidden';
 });
 
@@ -65,6 +73,7 @@ for (var i = 0; i < number.length; i++) {
                 } else {
                     count = count + 1;
                     gambarGif.src = imgNumber[count];
+                    gambarHelp.src = helpNumber[count];
                     audioSuccess.play();
                     alert('Benar');
                 }
