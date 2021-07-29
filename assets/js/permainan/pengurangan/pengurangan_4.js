@@ -48,11 +48,11 @@ mulai.addEventListener('click', function() {
     for (let index = 0; index < total[0]; index++) {
         let newEl = document.createElement('div');
         newEl.classList = 'col-1 uwu';
-        newEl.style = "width:30px";
+        newEl.style = "width:45px";
         var imgEl = document.createElement('img');
         imgEl.src = '../../assets/img/help/pengurangan/apel.png';
         imgEl.classList = 'bottom-0 pb-4 position-fixed';
-        imgEl.width = 30;
+        imgEl.width = 45;
         newEl.appendChild(imgEl);
         tambah.appendChild(newEl);
         numbs = 0;
@@ -93,10 +93,10 @@ for (var i = 0; i < number.length; i++) {
                     for (let index = 0; index < total[num]; index++) {
                         let newEl = document.createElement('div');
                         newEl.classList = 'col-1 uwu';
-                        newEl.style = "width:30px";
+                        newEl.style = "width:45px";
                         var imgEl = document.createElement('img');
                         imgEl.src = '../../assets/img/help/pengurangan/apel.png';
-                        imgEl.width = 30;
+                        imgEl.width = 45;
                         imgEl.classList = 'bottom-0 position-fixed pb-4';
                         // imgEl.classList = 'bottom-0 pb-4 position-fixed';
 
@@ -134,7 +134,7 @@ tambah.addEventListener('click', function() {
         var imgES = document.createElement('img');
         imgES.classList = 'bottom-0 position-fixed pb-4';
         imgES.src = '../../assets/img/help/pengurangan/silang.png';
-        imgES.width = 30;
+        imgES.width = 45;
         uwu[index2].appendChild(imgES);
     }
 });
