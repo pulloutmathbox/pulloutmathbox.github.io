@@ -26,11 +26,11 @@ var audioError = new Audio(`${baseError}`);
 var imgLoad = document.getElementById("ids");
 
 //Init
-window.onload = function(e){ 
+window.onload = function(e) {
     lanjut.style.visibility = 'hidden';
 }
 
-mulai.addEventListener('click', function(){
+mulai.addEventListener('click', function() {
     arrayNumber = [
         [9],
         [6],
@@ -48,29 +48,30 @@ mulai.addEventListener('click', function(){
     mulai.style.visibility = 'hidden';
 });
 
-gambarGif.addEventListener('click', function(){
+gambarGif.addEventListener('click', function() {
     audioGif = new Audio(`${baseAudio}${count+1}.mp3`);
     audioGif.play()
 });
 
-cek.addEventListener('click', function(){
+cek.addEventListener('click', function() {
     if (arrayNumber.length == 0) {
         alert('Silahkan Klik Mulai');
         message.src = `${baseImg}cancel.png`
     } else {
-        if(data.value == arrayNumber[count]){
+        if (data.value == arrayNumber[count]) {
             if (count == 4) {
+                message.src = `${baseImg}check.png`
                 lanjut.style.visibility = 'visible';
                 audioSuccess.play();
                 data.value = ''
-            }else {
+            } else {
                 message.src = `${baseImg}check.png`
-                count = count+1;
+                count = count + 1;
                 gambarGif.src = imgNumber[count]
                 audioSuccess.play();
                 data.value = ''
             }
-        } else{
+        } else {
             audioError.play();
             message.src = `${baseImg}cancel.png`
         }

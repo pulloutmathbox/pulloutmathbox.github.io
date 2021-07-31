@@ -34,8 +34,12 @@
 <body style="background: url(&quot;../assets/img/background.jpg&quot;) center / cover no-repeat;height: 780px;">
     <div class="container">
         <div class="row" style="margin-top: 12px;">
-            <div class="col-xl-2 d-xl-flex justify-content-xl-start align-items-xl-center"><a href="../index.html"><img data-bss-hover-animate="rubberBand" src="../assets/img/house.png" width="64px"></a></div>
-            <div class="col"><a href="index.html"><img data-bss-hover-animate="rubberBand" src="../assets/img/previous.png" width="64px"></a></div>
+            <div class="col-xl-2 d-xl-flex justify-content-xl-start align-items-xl-center">
+                <a href="../index.html"><img data-bss-hover-animate="rubberBand" src="../assets/img/house.png" width="64px"></a>
+            </div>
+            <div class="col">
+                <a href="index.html"><img data-bss-hover-animate="rubberBand" src="../assets/img/previous.png" width="64px"></a>
+            </div>
         </div>
     </div>
     <div class="container">
@@ -43,17 +47,18 @@
             <div class="w-100"></div>
             <div class="col-xl-5 d-xl-flex justify-content-xl-center align-items-xl-center"><img data-bss-hover-animate="rubberBand" id="gambarGif" src="../assets/img/evaluasi/perkalian_1.gif" width="450px"></div>
             <div class="col-xl-1 d-xl-flex justify-content-xl-center align-items-xl-center"><img data-bss-hover-animate="rubberBand" src="../assets/img/equal.png" width="70px"></div>
-            <div class="col-auto col-xl-4 text-center d-flex d-xxl-flex justify-content-xxl-center align-items-xxl-center">
+            <div class="col-auto text-center col-xl-4 d-flex d-xxl-flex justify-content-xxl-center align-items-xxl-center">
                 <div class="row d-xxl-flex justify-content-xxl-center align-items-xxl-center">
-                    <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center"><div class="group">      
-    <input id="data" type="text" required>
-    <span class="highlight"></span>
-    <span class="bar"></span>
-    <label>Label</label>
-</div>
+                    <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center">
+                        <div class="group">
+                            <input id="data" type="text" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Label</label>
+                        </div>
 
 
-</div>
+                    </div>
                     <div class="col"><button class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="cek" type="button" style="background: rgb(78,133,214);">Cek</button></div>
                 </div>
             </div>
@@ -63,7 +68,7 @@
     <div class="container">
         <div class="row">
             <div class="w-100"></div>
-            <div class="col d-xl-flex justify-content-xl-center align-items-xl-center"><a class="btn btn-primary" role="button" data-bss-hover-animate="wobble" id="lanjut" style="width: 150px;" href="../permainan/penjumlahan/game_level2.html">Lanjut</a></div>
+            <div class="col d-xl-flex justify-content-xl-center align-items-xl-center"><a class="btn btn-primary" role="button" data-bss-hover-animate="wobble" id="lanjut" style="width: 150px;" href="../index.html">Lanjut</a></div>
             <div class="col d-xl-flex justify-content-xl-center align-items-xl-center"><button class="btn btn-primary" id="mulai" type="button" style="width: 150px;background: rgb(255,153,0);">Mulai</button></div>
             <div class="w-100"></div>
         </div>
@@ -72,20 +77,20 @@
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
-        
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body d-xl-flex justify-content-xl-center align-items-xl-center">
+                    <img src="../assets/img/check.png" id="message" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
-            <div class="modal-body d-xl-flex justify-content-xl-center align-items-xl-center">
-            <img src="../assets/img/check.png" id="message"/>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-        
+
         </div>
     </div>
     <script src="../assets/js/bs-init.js"></script>
